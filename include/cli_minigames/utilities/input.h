@@ -4,7 +4,8 @@
 #include <string>
 #include <iostream>
 
-std::string read_line(const std::string& message = "") {
+std::string read_line(const std::string& message = "")
+{
     std::cout << message << ": " << std::flush;
     std::string input;
     std::getline(std::cin, input);

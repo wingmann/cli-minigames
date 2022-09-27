@@ -6,16 +6,20 @@
 #include <optional>
 #include <string>
 
-std::optional<int> try_stoi(const std::string& value) {
+std::optional<int> try_stoi(const std::string& value)
+{
     if (value.empty()) {
         std::cerr << "[!] Your input is empty.\n";
-    } else {
+    }
+    else {
         try {
             auto number = std::stoi(value);
             return number;
-        } catch (std::invalid_argument&) {
+        }
+        catch (std::invalid_argument&) {
             std::cerr << "[!] Your input is incorrect.\n";
-        } catch (std::out_of_range&) {
+        }
+        catch (std::out_of_range&) {
             std::cerr << "[!] Too long a number.\n";
         }
     }

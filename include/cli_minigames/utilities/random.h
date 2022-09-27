@@ -7,7 +7,8 @@
 
 template<typename T>
 requires std::integral<T>
-T generate_number(T min, T max) {
+T generate_number(T min, T max)
+{
     auto engine = std::mt19937(std::chrono::steady_clock::now()
         .time_since_epoch()
         .count());
@@ -16,7 +17,8 @@ T generate_number(T min, T max) {
 
 template<typename T>
 requires std::floating_point<T>
-T generate_number(T min, T max) {
+T generate_number(T min, T max)
+{
     auto engine = std::mt19937(std::chrono::steady_clock::now()
         .time_since_epoch()
         .count());

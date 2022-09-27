@@ -1,6 +1,7 @@
 #include "cli_minigames/utilities.h"
 
-int main() {
+int main()
+{
     std::cout << "Guess the number!\n";
 
     auto secret_number = generate_number(1, 100);
@@ -20,9 +21,11 @@ int main() {
 
         if (number < secret_number) {
             std::cout << "- too small!\n";
-        } else if (number > secret_number) {
+        }
+        else if (number > secret_number) {
             std::cout << "- to big!\n";
-        } else {
+        }
+        else {
             std::cout << "You win!\nCount of attempts: " << counter << '\n';
             break;
         }
